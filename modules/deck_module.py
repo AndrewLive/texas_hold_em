@@ -1,4 +1,3 @@
-from cgi import test
 import random
 from collections import defaultdict
 
@@ -23,6 +22,8 @@ class Deck():
 
         self.total_cards = len(self.deck)
 
+        return
+
     # checks if a card value is in the deck
     # returns true or false
     def card_value_in_deck(self, card_value):
@@ -39,6 +40,7 @@ class Deck():
         
         card = random.choice(self.deck)
         self.total_cards -= 1
+        self.num_cards[card[0]] -= 1
         return card
 
     # resets deck to init state
@@ -51,7 +53,7 @@ class Deck():
         total_cards_string = f'total cards: {self.total_cards}'
         num_cards_string = f'cards in deck: {self.num_cards}'
 
-        return total_cards_string + '\n' + num_cards_string
+        return total_cards_string + '\n' + num_cards_string + '\n'
 
         
 
