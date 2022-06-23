@@ -6,6 +6,10 @@ import deck_module
 # checks current cards in hand and deck and evaluates best
 # possible hand
 
+# Things the hand object should do:
+# draw random card into hand
+# 
+
 class Hand():
     def __init__(self):
         self.hand = []
